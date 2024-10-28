@@ -155,6 +155,7 @@ nav {
     margin-top: -1000px;
     position: absolute;
     justify-content: center;
+    position: absolute;
 }
 
 #logo-div img{
@@ -187,6 +188,7 @@ nav {
     padding: 15px;
     color: #fff;
     position: relative;
+    margin-top: 20px;
 }
 
 
@@ -271,8 +273,11 @@ nav {
 }
 
 .profile h3{
-    font-size: 26px;
-    color: #f44336;
+    font-size: 26px; 
+}
+
+.profile p{
+    font-size: 18px;
 }
 
 #slide{
@@ -309,17 +314,81 @@ nav {
 
 #page3{
     width: 100%;
-    height: 100vh;
+    height: 250vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: flex-start;
     flex-direction: column;
 }
 
+#page3 h1{
+    font-size: 50px;
+    color: #fff;
+    padding: 50px;
+}
 
 
+.para1{
+    background: #ffffff38;
+    color: #fff;
+    width: 70%;
+    padding: 25px;
+    margin-left: 25px;
+    border-radius: 20px;
+    margin-top: 70px;
+}
+
+.para1 h1{
+    font-size: 75px;
+    margin-bottom: 25px;
+}
+
+.para1 p{
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.parent-para2{
+    display: flex;
+    justify-content: right;
+    margin-right: 35px;
+}
+
+.para2{
+    background: #ffffff38;
+    color: #fff;
+    width: 65%;
+    padding: 25px;
+    margin-left: 25px;
+    border-radius: 20px;
+    margin-top: 60px;
+    text-align: right;
+}
+
+.para2 h2{
+    font-size: 55px;
+    margin-bottom: 25px;
+}
+
+.para2 p{
+    font-size: 25px;
+    line-height: 30px;
+}
+
+#moto{
+    height: 600px;
+    width: 700px;
+    margin-top: 25px;
+    border-radius: 20px;
+}
 
 
+#gro{
+    height: 600px;
+    width: 700px;
+    margin-top: 25px;
+    border-radius: 20px;
+}
 
 
 

@@ -1,32 +1,19 @@
-$(function () {
+var slide = document.getElementById("slide");
+        var upArrow = document.getElementById("upArrow");
+        var downArrow = document.getElementById("downArrow");
 
-    var mySwiper = new Swiper('.swiper-container', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
+        let x = 0;
 
-        // If we need pagination
-        pagination: '.swiper-pagination',
+        upArrow.onclick = function(){
+            if(x > "-900"){
+                x = x - 400;
+                slide.style.top = x + "px";
+            }
+        }
 
-        // Navigation arrows
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-
-        // And if we need scrollbar
-        // scrollbar: '.swiper-scrollbar',
-
-        autoplay: 3000
-    });
-
-
-    var v = document.getElementsByTagName("video")[0];
-
-    v.addEventListener("canplay", function () {
-        mySwiper.stopAutoplay();
-    }, true);
-
-    v.addEventListener("ended", function () {
-        mySwiper.startAutoplay();
-    }, true);
-
-});
+        downArrow.onclick = function(){
+            if(x < 0){
+                x = x + 400;
+                slide.style.top = x + "px";
+            }
+        }

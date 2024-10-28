@@ -464,6 +464,51 @@ nav {
 }
 
 
+footer{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.footer-content{
+    height: 30%;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #111827;
+    border-radius: 20px;
+}
+
+.footer-left img{
+    height: 300px;
+}
+
+.footer-right{
+    width: 90%;
+    padding: 20px;
+    color: #fff;
+}
+
+.footer-right h1{
+    font-size: 35px;
+}
+
+.footer-right p{
+    font-size: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.footer-right h3{
+    font-size: 25px;
+    margin-top: 15px;
+}
+
+hr{
+    margin-top: 10px;
+}
+
+
 
 
 

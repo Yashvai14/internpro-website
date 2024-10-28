@@ -34,7 +34,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #ffffff;
+    background: #ffffff60;
     padding: 10px 20px;
     border: .5px  solid #000000;
     border-radius: 60px;
@@ -92,7 +92,7 @@ nav {
 }
 
 .nav-links li a:hover{
-    color: #f5ca56ea;
+    color: #ffff;
 }
 
 .menu-icon {
@@ -148,6 +148,20 @@ nav {
     text-align: center;
 }
 
+#logo-div{
+    height: 40px;
+    width: 100%;
+    display: flex;
+    margin-top: -1000px;
+    position: absolute;
+    justify-content: center;
+}
+
+#logo-div img{
+    height: 250px;
+    width: 500px;
+}
+
 
 #hero h1{
     font-size: 6rem;
@@ -198,6 +212,7 @@ nav {
     display: flex;
     justify-content: center;
     margin-bottom: 80px;
+    color: #fff;
 }
 
 #test-h1::after{

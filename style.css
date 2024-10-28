@@ -167,6 +167,18 @@ nav {
     font-size: 6rem;
     line-height: 1.1;
     color: #fff;
+    position: relative;
+    margin-top: 110px;
+}
+
+#hero h1::before{
+    content: "Bridging the Gap Between Education and Industry!";
+    position: absolute;
+    color: black;
+    top: -5px;
+    left: -5px;
+    -webkit-text-stroke: 2px #95c11e;
+    z-index: -1;
 }
 
 #hero h3{
@@ -174,12 +186,14 @@ nav {
     font-weight: 400;
     padding: 15px;
     color: #fff;
+    position: relative;
 }
+
 
 #hero button{
     height: 60px;
     width: 160px;
-    background: linear-gradient( purple,blue);
+    background: linear-gradient( to left bottom, purple,blue);
     border-radius: 25px;
 }
 

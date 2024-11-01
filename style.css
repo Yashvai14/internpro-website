@@ -36,7 +36,7 @@ nav {
     align-items: center;
     background: #ffffff60;
     padding: 10px 20px;
-    border: .5px  solid #000000;
+    border: .5px  solid #00000094;
     border-radius: 60px;
     padding: 50px;
     margin-top: 30px;
@@ -198,6 +198,11 @@ nav {
     width: 160px;
     background: #000;
     border-radius: 25px;
+    border: none;
+}
+
+#hero button:hover{
+    background: #FDE047;
 }
 
 #hero button a{
@@ -393,84 +398,6 @@ nav {
 }
 
 
-#page3{
-    width: 100%;
-    height: 250vh;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-}
-
-#page3 h1{
-    font-size: 50px;
-    color: #fff;
-    padding: 50px;
-}
-
-
-.para1{
-    background: #ffffff38;
-    color: #fff;
-    width: 70%;
-    padding: 25px;
-    margin-left: 25px;
-    border-radius: 20px;
-    margin-top: 70px;
-}
-
-.para1 h1{
-    font-size: 75px;
-    margin-bottom: 25px;
-}
-
-.para1 p{
-    font-size: 25px;
-    line-height: 30px;
-}
-
-.parent-para2{
-    display: flex;
-    justify-content: right;
-    margin-right: 35px;
-}
-
-.para2{
-    background: #ffffff38;
-    color: #fff;
-    width: 65%;
-    padding: 25px;
-    margin-left: 25px;
-    border-radius: 20px;
-    margin-top: 60px;
-    text-align: right;
-}
-
-.para2 h2{
-    font-size: 55px;
-    margin-bottom: 25px;
-}
-
-.para2 p{
-    font-size: 25px;
-    line-height: 30px;
-}
-
-#moto{
-    height: 500px;
-    width: 600px;
-    margin-top: 25px;
-    border-radius: 20px;
-}
-
-
-#gro{
-    height: 500px;
-    width: 700px;
-    margin-top: 25px;
-    border-radius: 20px;
-}
-
 
 footer{
     display: flex;
@@ -567,4 +494,123 @@ hr{
     margin-top: 150px;
     border-radius: 20px;
 
+}
+
+
+/*-------------contact---------------*/
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1); /* Very light background */
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(50, 50, 50, 0.3); /* Slightly darker thumb */
+    border-radius: 4px;
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent */
+    border-radius: 12px;
+    padding: 30px;
+    width: 100%;
+    max-width: 800px; /* Increased width */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.form-container h2 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #444;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #444;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="tel"],
+.form-container select,
+.form-container textarea,
+.form-container input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.7); /* Transparent field background */
+    color: #333;
+    font-size: 1em;
+    box-sizing: border-box;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.form-container textarea {
+    resize: vertical;
+}
+
+.form-container input[type="file"] {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.payment-options {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    color: #444;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+    border: none;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Softer shadow */
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.form-container button:hover {
+    background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+    transform: translateY(-2px);
+}
+
+/* Radio button labels */
+.payment-options label {
+    display: flex;
+    align-items: center;
+}
+
+.payment-options input[type="radio"] {
+    margin-right: 8px;
 }

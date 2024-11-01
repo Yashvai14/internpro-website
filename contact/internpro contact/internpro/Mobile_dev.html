@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InternPro Mobile App Development Internship Form</title>
+    <style>
+        body {
+            background-image: url('mobile.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        /* Make scrollbar thin and less visible */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1); /* Very light background */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(50, 50, 50, 0.3); /* Slightly darker thumb */
+            border-radius: 4px;
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent */
+            border-radius: 12px;
+            padding: 30px;
+            width: 100%;
+            max-width: 800px; /* Increased width */
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            color: #444;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #444;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container input[type="tel"],
+        .form-container select,
+        .form-container textarea,
+        .form-container input[type="file"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.7); /* Transparent field background */
+            color: #333;
+            font-size: 1em;
+            box-sizing: border-box;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-container textarea {
+            resize: vertical;
+        }
+
+        .form-container input[type="file"] {
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        .payment-options {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            color: #444;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+            border: none;
+            color: white;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Softer shadow */
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .form-container button:hover {
+            background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+            transform: translateY(-2px);
+        }
+
+        /* Radio button labels */
+        .payment-options label {
+            display: flex;
+            align-items: center;
+        }
+
+        .payment-options input[type="radio"] {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Mobile App Development Internship Form</h2>
+    <form id="internshipForm">
+        <!-- Email Field -->
+        <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+
+        <!-- Full Name -->
+        <div class="form-group">
+            <label for="fullName">Full Name (as it will appear on the certificate) *</label>
+            <input type="text" id="fullName" placeholder="Enter your full name" required>
+        </div>
+
+        <!-- Contact Number -->
+        <div class="form-group">
+            <label for="contact">Contact Number/WhatsApp Number *</label>
+            <input type="tel" id="contact" placeholder="Enter your contact number" required>
+        </div>
+
+        <!-- College Name -->
+        <div class="form-group">
+            <label for="college">College Name *</label>
+            <input type="text" id="college" placeholder="Enter your college name" required>
+        </div>
+
+        <!-- Branch -->
+        <div class="form-group">
+            <label for="branch">Branch *</label>
+            <input type="text" id="branch" placeholder="Enter your branch" required>
+        </div>
+
+        <!-- Year -->
+        <div class="form-group">
+            <label for="year">Year *</label>
+            <select id="year" required>
+                <option value="">Select your year</option>
+                <option value="1st">1st Year</option>
+                <option value="2nd">2nd Year</option>
+                <option value="3rd">3rd Year</option>
+                <option value="4th">4th Year</option>
+            </select>
+        </div>
+
+        <!-- Domain -->
+        <div class="form-group">
+            <label for="domain">Domain *</label>
+            <input type="text" id="domain" value="Mobile App Development" readonly>
+        </div>
+
+        <!-- Why do you want this internship? -->
+        <div class="form-group">
+            <label for="reason">Why do you want this internship? *</label>
+            <textarea id="reason" rows="4" placeholder="Write your answer here" required></textarea>
+        </div>
+
+        <!-- Why choose InternPro? -->
+        <div class="form-group">
+            <label for="internProReason">Why did you select InternPro Organization? *</label>
+            <textarea id="internProReason" rows="4" placeholder="Write your answer here" required></textarea>
+        </div>
+
+        <!-- Resume Upload -->
+        <div class="form-group">
+            <label for="resume">Upload Resume (PDF or DOC, Max 10 MB) *</label>
+            <input type="file" id="resume" accept=".pdf, .doc, .docx" required>
+        </div>
+
+        <!-- Payment -->
+        <div class="form-group">
+            <label>Payment *</label>
+            <div class="payment-options">
+                <label><input type="radio" name="payment" value="done"> Payment Done</label>
+                <label><input type="radio" name="payment" value="notDone"> Not Done</label>
+            </div>
+        </div>
+
+        <!-- Payment Screenshot Upload -->
+        <div class="form-group">
+            <label for="paymentScreenshot">Upload Payment Screenshot (PDF, DOC, or Image, Max 1 MB) *</label>
+            <input type="file" id="paymentScreenshot" accept=".pdf, .doc, .docx, .jpg, .jpeg, .png" required>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+</div>
+<script>
+    document.getElementById('internshipForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission for validation
+
+        // Get form inputs
+        const email = document.getElementById('email');
+        const fullName = document.getElementById('fullName');
+        const contact = document.getElementById('contact');
+        const college = document.getElementById('college');
+        const branch = document.getElementById('branch');
+        const year = document.getElementById('year');
+        const reason = document.getElementById('reason');
+        const internProReason = document.getElementById('internProReason');
+        const resume = document.getElementById('resume');
+        const paymentScreenshot = document.getElementById('paymentScreenshot');
+        const paymentDone = document.querySelector('input[name="payment"]:checked');
+
+        // Error messages
+        const errors = [];
+
+        // Email validation
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailPattern.test(email.value)) {
+            errors.push("Please enter a valid email address.");
+            email.style.border = "2px solid red";
+        } else {
+            email.style.border = "1px solid #ccc";
+        }
+
+        // Full name validation - only letters and spaces
+        const namePattern = /^[a-zA-Z\s]+$/;
+        if (!namePattern.test(fullName.value.trim())) {
+            errors.push("Full Name should contain only letters and spaces.");
+            fullName.style.border = "2px solid red";
+        } else {
+            fullName.style.border = "1px solid #ccc";
+        }
+
+        // Contact number validation - Indian 10-digit format, starting with 6, 7, 8, or 9
+        const contactPattern = /^[6-9]\d{9}$/;
+        if (!contactPattern.test(contact.value)) {
+            errors.push("Contact Number should be a valid 10-digit number starting with 6, 7, 8, or 9.");
+            contact.style.border = "2px solid red";
+        } else {
+            contact.style.border = "1px solid #ccc";
+        }
+
+        // College name validation - should not be empty
+        if (college.value.trim() === "") {
+            errors.push("College Name is required.");
+            college.style.border = "2px solid red";
+        } else {
+            college.style.border = "1px solid #ccc";
+        }
+
+        // Branch validation - should not be empty
+        if (branch.value.trim() === "") {
+            errors.push("Branch is required.");
+            branch.style.border = "2px solid red";
+        } else {
+            branch.style.border = "1px solid #ccc";
+        }
+
+        // Year validation - must select an option
+        if (year.value === "") {
+            errors.push("Please select your Year.");
+            year.style.border = "2px solid red";
+        } else {
+            year.style.border = "1px solid #ccc";
+        }
+
+        // Textarea validations for internship reason and InternPro reason
+        if (reason.value.trim().length < 10) {
+            errors.push("Why you want this internship must be at least 10 characters.");
+            reason.style.border = "2px solid red";
+        } else {
+            reason.style.border = "1px solid #ccc";
+        }
+
+        if (internProReason.value.trim().length < 10) {
+            errors.push("Why you selected InternPro must be at least 10 characters.");
+            internProReason.style.border = "2px solid red";
+        } else {
+            internProReason.style.border = "1px solid #ccc";
+        }
+
+        // File validation for resume (PDF or DOC, Max 10 MB)
+        const validResumeTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+        if (resume.files.length === 0) {
+            errors.push("Please upload your resume.");
+            resume.style.border = "2px solid red";
+        } else if (!validResumeTypes.includes(resume.files[0].type) || resume.files[0].size > 10 * 1024 * 1024) {
+            errors.push("Resume must be a PDF or DOC file less than 10 MB.");
+            resume.style.border = "2px solid red";
+        } else {
+            resume.style.border = "1px solid #ccc";
+        }
+
+        // File validation for payment screenshot (PDF, DOC, or image, Max 1 MB)
+        const validScreenshotTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/jpeg', 'image/png'];
+        if (paymentScreenshot.files.length === 0) {
+            errors.push("Please upload the payment screenshot.");
+            paymentScreenshot.style.border = "2px solid red";
+        } else if (!validScreenshotTypes.includes(paymentScreenshot.files[0].type) || paymentScreenshot.files[0].size > 1 * 1024 * 1024) {
+            errors.push("Payment screenshot must be a PDF, DOC, or image file less than 1 MB.");
+            paymentScreenshot.style.border = "2px solid red";
+        } else {
+            paymentScreenshot.style.border = "1px solid #ccc";
+        }
+
+        // Payment selection validation
+        if (!paymentDone) {
+            errors.push("Please select a payment status.");
+        }
+
+        // If there are errors, display them
+        if (errors.length > 0) {
+            alert(errors.join("\n"));
+        } else {
+            alert("Form submitted successfully!");
+            // Here you can proceed with the form submission, e.g., sending data to the server
+            document.getElementById('internshipForm').submit();
+        }
+    });
+</script>
+
+
+</body>
+</html>
